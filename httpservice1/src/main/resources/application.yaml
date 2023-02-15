@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: "http-service1"
+  sleuth:
+    otel:
+      exporter:
+        otlp:
+          endpoint: xxx
+          headers:
+            x-sls-otel-project: xxx
+            x-sls-otel-instance-id: xxx
+            x-sls-otel-ak-id: xxx
+            x-sls-otel-ak-secret: xxx
+server:
+  port: 8080
+logging:
+  level:
+    org.springframework.cloud.sleuth: trace
+    io.opentelemetry: trace
